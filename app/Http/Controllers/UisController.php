@@ -16,13 +16,11 @@ class UisController extends Controller
         return view('uis.create');
     }
 
-    public function show($id){
+    public function show(){
 
-        $usuario = Documento::find($id);
+        $usuario = Documento::find();
 
-        //return $usuario;
-
-        return view('uis.show', compact('usuario'));
+        return view('uis.show', compact('documentos'));
     }
 
     public function showMore(){
@@ -47,4 +45,10 @@ class UisController extends Controller
     public function print(){
         return view('uis.print');
     }
+
+    public function color(){
+        return view('color.color');
+    }
+
+    
 }
